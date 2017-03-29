@@ -15,38 +15,36 @@ public class Menjacnica implements SpecifikacijaInterfejs {
 			double SrednjiKurs) {
 		Kurs novi = new Kurs();
 		novi.setDatum(dan);
-		novi.setValuta(valuta);
+        novi.setValuta(valuta);
 		novi.setKupovniKurs(kupovniKurs);
 		novi.setProdajniKurs(prodajniKurs);
 		novi.setSrednjiKurs(SrednjiKurs);
 		if(lista.contains(novi)!=true) lista.addLast(novi);
-		
 	}
+
 
 	@Override
 	public void obrisiKursValuteZaDan(GregorianCalendar dan, Valuta valuta) {
-		for(int i =0;i<lista.size();i++){
-			Kurs trenutni = new Kurs ();
-			if(trenutni.getDatum()==dan && trenutni.getValuta().equals(valuta)){
-				lista.remove(trenutni);
-				break;
+
+		    for (int i =0;i<lista.size();i++){
+			if(lista.get(i).getDatum()==dan && lista.get(i).getValuta().equals(valuta)){
+				lista.remove(i);
+				return;
 			}
-			
-			
 		}
-		
+
 		
 	}
 
 	@Override
 	public Kurs vratiKursValuteZaDan(GregorianCalendar dan, Valuta valuta) {
-		for(int i =0;i<lista.size();i++){
+            for(int i =0;i<lista.size();i++){
 			Kurs trenutni = new Kurs ();
 			if(trenutni.getDatum()==dan && trenutni.getValuta().equals(valuta)){
 				return trenutni;
 		   }
-	
-	      }
-	            return null;
-	}
+		
+	            }
+            return null;
+}
 }
