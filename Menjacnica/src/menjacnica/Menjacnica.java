@@ -12,13 +12,13 @@ public class Menjacnica implements SpecifikacijaInterfejs {
 
 	@Override
 	public void dodajKursValuteZaDan(GregorianCalendar dan, Valuta valuta, double prodajniKurs, double kupovniKurs,
-			double SrednjiKurs) {
+			double srednjiKurs) {
 		Kurs novi = new Kurs();
 		novi.setDatum(dan);
         novi.setValuta(valuta);
 		novi.setKupovniKurs(kupovniKurs);
 		novi.setProdajniKurs(prodajniKurs);
-		novi.setSrednjiKurs(SrednjiKurs);
+		novi.setSrednjiKurs(srednjiKurs);
 		if(lista.contains(novi)!=true) lista.addLast(novi);
 	}
 
