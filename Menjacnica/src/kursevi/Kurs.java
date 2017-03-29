@@ -25,18 +25,23 @@ import kursevi.Valuta;
 		return srednjiKurs;
 	}
 	public void setDatum(GregorianCalendar datum) {
+		if(datum== null) throw new RuntimeException("Neuspesan unos, pokusajte ponovo");
 		this.datum = datum;
 	}
 	public void setValuta(Valuta valuta) {
+		if(valuta==null) throw new RuntimeException("Neuspesan unos, pokusajte ponovo");
 		this.valuta = valuta;
 	}
 	public void setProdajniKurs(double prodajniKurs) {
+		if(prodajniKurs<=0) throw new RuntimeException("Neuspesan unos, pokusajte ponovo");
 		this.prodajniKurs = prodajniKurs;
 	}
 	public void setKupovniKurs(double kupovniKurs) {
+		if(kupovniKurs<=0) throw new RuntimeException("Neuspesan unos, pokusajte ponovo");
 		this.kupovniKurs = kupovniKurs;
 	}
 	public void setSrednjiKurs(double srednjiKurs) {
+		if(srednjiKurs<=0) throw new RuntimeException("Neuspesan unos, pokusajte ponovo");
 		this.srednjiKurs = srednjiKurs;
 	}
 	@Override

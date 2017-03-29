@@ -12,9 +12,11 @@ public class Valuta {
 		return oznaka;
 	}
 	public void setNaziv(String naziv) {
+		if(naziv==null) throw new RuntimeException("Neuspesan unos, pokusajte ponovo");
 		this.naziv = naziv;
 	}
 	public void setOznaka(String oznaka) {
+		if(oznaka==null) throw new RuntimeException("Neuspesan unos, pokusajte ponovo");
 		this.oznaka = oznaka;
 	}
 	@Override
